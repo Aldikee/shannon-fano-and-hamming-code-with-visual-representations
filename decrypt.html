@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="decrypt.js"></script>
+    <title>Huffman</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1 class="title text-dark">Decrypt</h1>
+        <h6 class="title text-dark"><a href="index.html">Huffman</a></h6>
+        <h6 class="title text-dark"><a href="shannon.html">Shannon-Fano</a></h6>
+    </div>
+
+    <div class="d-flex justify-content-center">
+
+        <div id="container inputPanel">
+            <div class="row">
+                <div class="col inputField">
+                    Binary Sequence
+                    <br>
+                    <input type='file' id="inputField"/>
+                </div>
+                <div class="col decryptJson">
+                    JSON for decryption<br>
+                    <input type='file' id="decryptJson"/>
+                </div>
+            </div>
+            <br>
+            <div class="row buttonPanel">
+                Decompressed file
+                <input class="btn btn-success" type="button" id="decodeBTN" value="Download" onclick="decode()"></input>
+    
+            </div>
+        </div>
+
+        <div class="daddy">
+            <a id="downloadAnswer" style="display: none;" >Download decompressed file</a>
+        </div>
+  
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Error!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Input is empty</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
